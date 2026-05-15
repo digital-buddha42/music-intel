@@ -155,6 +155,11 @@ def main():
         if show:
             shows.append(show)
 
+    if not shows:
+        print("\nERROR: No shows scraped — skipping file writes to preserve existing data.")
+        print("Check if discobiscuits.net is blocking requests (403) and try again later.")
+        return
+
     script_dir = os.path.dirname(os.path.abspath(__file__))
     project_root = os.path.dirname(script_dir)
     write_files(shows, project_root)
