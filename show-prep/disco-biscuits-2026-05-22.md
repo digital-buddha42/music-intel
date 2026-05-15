@@ -26,6 +26,26 @@ Last 5 full-band shows: 5/07 Viva El Gonzo, 4/25 Brooklyn Bowl LV, 4/24 Brooklyn
 
 **Encore pattern:** Little Shimmy (4/16), Frog Legs (4/19), Magellan (4/25), Story of the World (4/24), Helicopters (4/18)
 
+## Previous Run Closers
+
+Two runs before Mishawaka: (1) the West Coast Bicycle Day Weekend run (San Diego → SF → Berkeley → Crystal Bay, Apr 16–19), and (2) the Vegas run (Brooklyn Bowl LV, Apr 24–25).
+
+### West Coast Bicycle Day Weekend — Crystal Bay Club Casino, Apr 19
+```
+S1: Save the Robots > Scars of the Brave > The Great Abyss > Shocked > Cyclone > No Recollection
+S2: Humuhumunukunukuapua'a > Mindless Dribble > Better in Doses > Voices Insane > Save the Robots
+E:  Frog Legs
+```
+*Closer note: Save the Robots full-set sandwich. Voices Insane into the reprise was the peak.*
+
+### Vegas Run — Brooklyn Bowl Las Vegas, Apr 25
+```
+S1: Mirrors > I-Man > We Like to Party > Ring the Doorbell Twice (inv) > Svenghali (inv) > We Like to Party
+S2: House Dog Party Favor, M.E.M.P.H.I.S. > Shadow (w/ Phil Collins tease) > Country Royale > I-Man
+E:  Magellan
+```
+*Closer note: I-Man sandwich across S1 + S2. Shadow had a 'Take Me Home' (Phil Collins) tease. Magellan as a standalone encore.*
+
 ## Bustout Candidates
 
 | Song | Notes | Last Known |

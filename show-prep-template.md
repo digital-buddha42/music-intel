@@ -21,6 +21,15 @@ What have they been playing the last 3-5 shows?
 - Any songs they've been building toward?
 - Openers and closers from recent shows:
 
+## Previous Run Closers
+Final night setlist from each of the two runs immediately before this one — use these to track what they closed out with and spot short-gap candidates.
+
+### [Run Name / Venue] — [Date]
+[Full setlist]
+
+### [Run Name / Venue] — [Date]
+[Full setlist]
+
 ## Bustout Candidates
 Songs with big gaps that are overdue — most likely to get a crowd reaction:
 | Song | Gap | Last Played |

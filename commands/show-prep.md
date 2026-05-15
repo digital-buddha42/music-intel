@@ -27,10 +27,20 @@ If user said "next": find the next upcoming show for this artist from `tour-rada
 
 If user gave a date: confirm venue/location by checking `tour-radar.md` or searching the web.
 
-### Step 3 — Generate the brief
+### Step 3 — Identify the two previous runs
+From `setlists/[artist]-recent.md`, group past shows into runs. A run is either:
+- A named/announced tour leg, OR
+- A multi-night stand at a single venue (e.g., 3 nights at Mishawaka counts as one run), OR
+- An isolated standalone show
+
+Find the two most recent runs before the current show. For each, pull the **last setlist from that run** (the final night). These go in the "Previous Run Closers" section of the brief.
+
+### Step 4 — Generate the brief
 Using the `show-prep-template.md` structure, populate:
 
 - **Recent setlist context**: pull from `setlists/[artist]-recent.md` — look at last 3-5 shows. What songs are showing up every night? What's the opener pattern? What are they closing Set 2 with?
+
+- **Previous run closers**: using the two runs identified in Step 3, show the full setlist for the final night of each run. Label each with the run name/venue and date.
 
 - **Bustout candidates**: pull from `artists/[artist].md` bustout watch table. For Phish especially, reference gap chart data. Flag songs with 75+ show gaps as "prime candidates."
 
@@ -42,11 +52,11 @@ Using the `show-prep-template.md` structure, populate:
 
 - **Warm-up listening**: suggest 1-2 shows from `setlists/[artist]-recent.md` that are rated highly or have notable jams. Link to phish.in for Phish recordings.
 
-### Step 4 — Save the file
+### Step 5 — Save the file
 Save the completed brief to:
 `show-prep/[artist-slug]-[date].md`
 
-### Step 5 — Report to user
+### Step 6 — Report to user
 Display the key highlights directly in the terminal (not the whole file):
 - The show details
 - Top 3 bustout candidates
