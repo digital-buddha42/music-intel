@@ -15,55 +15,47 @@ Examples:
 When this command is invoked:
 
 ### Step 1 — Gather context
-Read the following files:
-- `show-prep-template.md` — the output template to use
-- `artists/[artist].md` — current artist profile (hot songs, bustout watch)
-- `setlists/[artist]-recent.md` — recent setlists
-- `tour-radar.md` — to find the specific show date/venue
-- `config.md` — for location preferences
+Read:
+- `show-prep-template.md`
+- `artists/[artist].md`
+- `setlists/[artist]-recent.md`
+- `tour-radar.md`
+- `config.md`
 
 ### Step 2 — Determine the show
-If user said "next": find the next upcoming show for this artist from `tour-radar.md` or by web searching "[artist name] tour dates 2025 2026".
+If user said "next": find the next upcoming show from `tour-radar.md` or web search.
+If user gave a date or venue: confirm date/venue by checking `tour-radar.md` or searching the web.
 
-If user gave a date: confirm venue/location by checking `tour-radar.md` or searching the web.
-
-### Step 3 — Identify the two previous runs
+### Step 3 — Identify the recent runs
 From `setlists/[artist]-recent.md`, group past shows into runs. A run is either:
 - A named/announced tour leg, OR
-- A multi-night stand at a single venue (e.g., 3 nights at Mishawaka counts as one run), OR
+- A multi-night stand at a single venue (e.g., 3 nights at Mishawaka = one run), OR
 - An isolated standalone show
 
-Find the two most recent runs before the current show. For each, pull the **last setlist from that run** (the final night). These go in the "Previous Run Closers" section of the brief.
+Pull setlists from at least the last 3 shows, spanning at least 2 runs. These go in the "Recent Setlists" section.
 
 ### Step 4 — Generate the brief
-Using the `show-prep-template.md` structure, populate:
+Keep it tight. Use the `show-prep-template.md` structure:
 
-- **Recent setlist context**: pull from `setlists/[artist]-recent.md` — look at last 3-5 shows. What songs are showing up every night? What's the opener pattern? What are they closing Set 2 with?
+- **Recent Setlists**: raw setlists from the last 3+ shows (labeled by run/venue/date). More is better — at minimum cover the two previous runs.
 
-- **Previous run closers**: using the two runs identified in Step 3, show the full setlist for the final night of each run. Label each with the run name/venue and date.
+- **Top 10 Likely Songs**: ranked list of songs most likely to appear at this show. Base on: songs appearing in 2+ of the last 3 shows, opener/closer patterns, songs they're clearly building toward, and gap pressure for overdue staples. No commentary in the list — just rank them.
 
-- **Bustout candidates**: pull from `artists/[artist].md` bustout watch table. For Phish especially, reference gap chart data. Flag songs with 75+ show gaps as "prime candidates."
+- **Bustout Watch**: songs with 50+ show gaps. Pull from `artists/[artist].md` or gap notes in setlist data. Flag 75+ as prime candidates.
 
-- **Missing from this tour**: compare recent setlists to the full song catalog. What notable songs haven't appeared yet this run?
+- **What To Listen For**: 2-3 specific things — tour narrative, jam tendencies, recurring vehicles, teases to watch for.
 
-- **Likely setlist shape**: based on recent show patterns, describe the probable arc
+- **Logistics**: travel from Phoenix or Denver (whichever is closer), venue notes, curfew.
 
-- **What to listen for**: synthesize the tour narrative into 2-3 specific things — e.g., "They've been building Tweezer into massive Type II territory lately" or "Page has been featured heavily in Set 1 recently"
-
-- **Warm-up listening**: suggest 1-2 shows from `setlists/[artist]-recent.md` that are rated highly or have notable jams. Link to phish.in for Phish recordings.
+- **Warm-Up Listening**: 1-2 highly-rated recent shows. Link to phish.in for Phish, archive.org for Biscuits.
 
 ### Step 5 — Save the file
-Save the completed brief to:
-`show-prep/[artist-slug]-[date].md`
+Save to: `show-prep/[artist-slug]-[date].md`
 
 ### Step 6 — Report to user
-Display the key highlights directly in the terminal (not the whole file):
-- The show details
-- Top 3 bustout candidates
-- What to listen for
-- Link to the saved file
+Display the brief directly in the terminal. Show the full file — it should be short enough to read in one shot.
 
 ## Notes
-- For Phish: always check gap chart context. Fans care deeply about gaps.
-- Tone: enthusiast-level — assume the user knows the catalog. Don't explain who Trey is.
-- For "next" shows that are > 2 hours from Phoenix or Denver, note the travel situation
+- Tone: enthusiast-level. Assume the user knows the catalog.
+- For Phish: gap chart context is non-negotiable.
+- Flag travel if the show is > 2 hours from Phoenix or Denver.

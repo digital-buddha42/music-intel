@@ -1,6 +1,6 @@
 # Show Prep Template
 
-When generating a show prep brief, populate all sections. Save to /show-prep/[artist]-[date].md.
+When generating a show prep brief, populate all sections. Keep it tight and scannable. Save to /show-prep/[artist]-[date].md.
 
 ---
 
@@ -9,57 +9,64 @@ When generating a show prep brief, populate all sections. Save to /show-prep/[ar
 *Generated: [TIMESTAMP]*
 
 ## The Show
-- **Artist**: 
-- **Venue**: 
+- **Venue**: [Venue], [City] — [distance/travel note]
 - **Date / Doors / Settime**: 
 - **Ticket status**: 
-- **Show number** (in current tour): 
 
-## Recent Setlist Context
-What have they been playing the last 3-5 shows? 
-- Any songs appearing every night?
-- Any songs they've been building toward?
-- Openers and closers from recent shows:
+## Recent Setlists
+Raw setlists from the last 3+ shows (include run label, venue, date):
 
-## Previous Run Closers
-Final night setlist from each of the two runs immediately before this one — use these to track what they closed out with and spot short-gap candidates.
+### [Run / Venue] — [Date]
+```
+S1: ...
+S2: ...
+E:  ...
+```
 
-### [Run Name / Venue] — [Date]
-[Full setlist]
+### [Run / Venue] — [Date]
+```
+S1: ...
+S2: ...
+E:  ...
+```
 
-### [Run Name / Venue] — [Date]
-[Full setlist]
+### [Run / Venue] — [Date]
+```
+S1: ...
+S2: ...
+E:  ...
+```
 
-## Bustout Candidates
-Songs with big gaps that are overdue — most likely to get a crowd reaction:
+## Top 10 Likely Songs
+Ranked by recency, pattern, and gap pressure. No commentary needed — just the list.
+
+1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+
+## Bustout Watch
+Songs overdue for a return — flag anything 50+ shows:
 | Song | Gap | Last Played |
 |------|-----|-------------|
 | | | |
 
-## Songs They Haven't Played This Tour Yet
-Notable songs missing from the current run that might show up:
-
-## Likely Setlist Shape
-Based on recent shows, what's the probable structure?
-- Set 1 vibe: (tight/composed vs. exploratory, likely length)
-- Set 2 vibe: (jam-heavy? Any multi-song vehicles likely?)
-- Encore style lately:
-
-## Segue / Sandwich Watch
-Any song sandwiches or recurring segue pairs they've been doing:
-
 ## What To Listen For
-2-3 specific things to pay attention to at this show based on current tour arc:
+2-3 specific things based on current tour arc:
 1. 
 2. 
 3. 
 
 ## Logistics
 - Getting there: 
-- Parking / rideshare notes: 
-- Lot scene: 
-- Set times / curfew:
+- Venue notes / curfew:
 
-## Recordings to Listen to Beforehand
-Warm-up listening — a recent excellent show or classic version of a song likely to appear:
+## Warm-Up Listening
+1-2 recent shows worth spinning beforehand:
 - 
