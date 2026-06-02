@@ -19,6 +19,7 @@ TARGETS = {
 
 ARTIST_LINKS = {
     "Disco Biscuits": "https://www.discobiscuits.com/shows",
+    "Widespread Panic": "https://widespreadpanic.com/shows",
     "Billy Strings": "https://billystrings.com/shows",
     "Trey Anastasio Band": "https://treyanastasio.com/tour",
 }

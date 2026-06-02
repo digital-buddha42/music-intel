@@ -26,7 +26,15 @@ This writes to:
 - `artists/disco-biscuits.md`
 - `setlists/biscuits-recent.md`
 
-**Agent C — Tour radar:**
+**Agent C — Widespread Panic data:**
+```bash
+cd scripts && python fetch_wsp.py
+```
+This writes to:
+- `artists/widespread-panic.md`
+- `setlists/wsp-recent.md`
+
+**Agent D — Tour radar:**
 ```bash
 cd scripts && python tour_radar.py
 ```

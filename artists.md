@@ -5,6 +5,7 @@
 - **Disco Biscuits** — scrape discobiscuits.net + etree
 
 ## Secondary / Watch List
+- **Widespread Panic** — scrape everydaycompanion.com
 - Billy Strings
 - Trey Anastasio Band (TAB)
 
