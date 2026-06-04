@@ -16,7 +16,8 @@ A personal music intelligence system for tracking jam band artists, setlists, to
 
 ## Data Sources
 - **Phish**: phish.net API v5 (requires PHISHNET_API_KEY env var) + phish.in for recordings
-- **Disco Biscuits**: discobiscuits.net setlists + archive.org etree
+- **Disco Biscuits**: `discobiscuits` MCP server at `https://discobiscuits.net/mcp` — 16 tools including SEARCH_SHOWS, GET_SETLIST, SEARCH_SONGS, SEARCH_SEGUES, SONG_HISTORY. Configured in `.claude/settings.json`. Use MCP tools first; fall back to `fetch_biscuits.py` only if MCP is unavailable.
+- **Widespread Panic**: setlist.fm API (requires SETLISTFM_API_KEY) via `fetch_wsp.py`
 - **Dead & Company / GD**: setlist.fm scraping
 - **General tours/shows**: songkick or bandsintown scraping for upcoming dates
 
@@ -63,7 +64,7 @@ python tour_radar.py              # → tour-radar.md
 
 **`fetch_phish.py`** — phish.net API v5 client. Fetches last 15 show dates, pulls each setlist, then calls `/songs` for gap data. Songs with 50+ gap are written to the bustout watch table. `isjamchart` flag marks notable jams with ⭐. All output is structured markdown.
 
-**`fetch_biscuits.py`** — scrapes `discobiscuits.net/shows/year/YYYY` for show URLs, then scrapes each show page. The site structure is fragile; `raw_text` fallback grabs up to 80 lines of the main content block when structured parsing fails.
+**`fetch_biscuits.py`** — fallback scraper for Disco Biscuits. Use the `discobiscuits` MCP server instead when available (see `.claude/settings.json`). The scraper is kept as a backup for local/home-network use where the site is accessible.
 
 **`tour_radar.py`** — pulls Phish upcoming shows from phish.net API, filters against `TARGETS` dict of city lists for PHX and Denver/Boulder regions. Other artists (Biscuits, Billy Strings, TAB) are listed as manual check links — no scraping for those.
 

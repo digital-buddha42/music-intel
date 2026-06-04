@@ -18,13 +18,12 @@ This writes to:
 - `artists/phish.md`
 - `setlists/phish-recent.md`
 
-**Agent B — Disco Biscuits data:**
-```bash
-cd scripts && python fetch_biscuits.py
-```
-This writes to:
-- `artists/disco-biscuits.md`
-- `setlists/biscuits-recent.md`
+**Agent B — Disco Biscuits data (MCP):**
+Use the `discobiscuits` MCP server tools directly:
+- Call `SEARCH_SHOWS` with a recent date range to fetch the last 10 shows
+- For each show, call `GET_SETLIST` (or equivalent) to retrieve the full setlist
+- Write the results to `artists/disco-biscuits.md` and `setlists/biscuits-recent.md`
+- If the MCP server is unavailable, fall back to: `cd scripts && python fetch_biscuits.py`
 
 **Agent C — Widespread Panic data:**
 ```bash
