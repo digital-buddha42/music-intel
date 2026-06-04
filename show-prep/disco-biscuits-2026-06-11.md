@@ -12,17 +12,40 @@
 
 ## Recent Setlists
 
+### Mishawaka Amphitheatre — Bellvue, CO — 5/24/26
+*(Night 3 — notable: 6th ever Chemical Warfare Brigade)*
+```
+S1: Mishawaka Improv Jam
+S2: Plan B, Little Lai, And the Ladies Were the Rest of the Night, Floodlights,
+    Shelby Rose, Chemical Warfare Brigade, Three Wishes, Confrontation
+```
+
+### Mishawaka Amphitheatre — Bellvue, CO — 5/23/26
+```
+S1: World Is Spinning > Trap Door > Gangster > Dino Baby > 42, Pat and Dex
+S2: Caterpillar > Mindless Dribble > Bombs > Better in Doses > Mindless Dribble > Caterpillar
+E:  Rivers
+```
+
+### Mishawaka Amphitheatre — Bellvue, CO — 5/22/26
+```
+S1: Save the Robots, Kitchen Mitts > 421 > Humuhumunukunukuapua'a > Hot Air Balloon
+S2: Twisted in the Road > Simulations > Space Train > Cyclone > Jigsaw Earth,
+    Once the Fiddler Paid
+E:  Frog Legs
+```
+*(Frog Legs finally got its clean run — resolves the Crystal Bay power-cut from 4/19)*
+
 ### Viva El Gonzo Festival — San Jose Del Cabo, MX — 5/7/26
-*(Festival set; second half performed as Tractorbeam w/ Goose members: Rick Mitarotonda, Peter Anspach, Cotter Ellis)*
+*(Festival set; second half as Tractorbeam w/ Goose: Rick Mitarotonda, Peter Anspach, Cotter Ellis)*
 ```
 S1: Home Again, Little Shimmy in a Conga Line, Helicopters[Goose], Hot Air Balloon[unfinished]
     > Scars of the Brave > Quad D[Tractorbeam Remix] > Better Off Alone > Show Me Love
     > Tricycle x Like a Prayer > Hymn > I Saw Ya Dancing
 ```
-*(Soundcheck: I Saw Ya Dancing, I-Man partial)*
 
 ### Brooklyn Bowl Las Vegas — 4/25/26
-*(Rated 3.70 — strongest of the Vegas stand)*
+*(Rated 3.70)*
 ```
 S1: Mirrors > I-Man > We Like to Party > Ring the Doorbell Twice[inverted]
     > Svenghali[inverted] > We Like to Party
@@ -31,40 +54,20 @@ E:  Magellan
 ```
 *(Shadow w/ Phil Collins "Take Me Home" tease)*
 
-### Brooklyn Bowl Las Vegas — 4/24/26
-*(Rated 3.50)*
-```
-S1: Shelby Rose > Spacebirdmatingcall > To Be Continued > Risky Business
-    > Spacebirdmatingcall > Shelby Rose
-S2: Rivers > Rock Candy > Munchkin Invasion* > Tricycle > Fire Will Exchange[inverted]
-    > Rock Candy
-E:  Story of the World (w/ "I Melt With You" tease)
-```
-*(\*Munchkin unfinished)*
-
-### Crystal Bay Club Casino — Crystal Bay, NV — 4/19/26
-```
-S1: Save the Robots > Scars of the Brave > The Great Abyss > Shocked > Cyclone
-    > No Recollection
-S2: Humuhumunukunukuapua'a > Mindless Dribble > Better in Doses > Voices Insane[unfinished]
-    > Save the Robots
-E:  Frog Legs[inverted, unfinished — venue power lost mid-segue]
-```
-
 ---
 
 ## Top 10 Likely Songs
 
-1. I-Man
-2. Hot Air Balloon
-3. Spacebirdmatingcall
-4. Scars of the Brave
-5. Tricycle
-6. Little Shimmy in a Conga Line
-7. Rock Candy
-8. No Recollection
-9. House Dog Party Favor
-10. Save the Robots
+1. Hot Air Balloon
+2. Mindless Dribble
+3. Shelby Rose
+4. Save the Robots
+5. Caterpillar
+6. Cyclone
+7. I-Man
+8. Spacebirdmatingcall
+9. Tricycle
+10. World Is Spinning
 
 ---
 
@@ -72,10 +75,10 @@ E:  Frog Legs[inverted, unfinished — venue power lost mid-segue]
 
 | Song | Notes |
 |------|-------|
-| Helicopters | Played 5/7 and 4/18 — now fresh, but watch for encore slot |
-| Munchkin Invasion | Unfinished on 4/24 — unresolved, likely to return |
-| Frog Legs | Pulled mid-show by power failure on 4/19 — strongly overdue for a clean run |
-| Story of the World | Played 4/24 — relatively fresh, but always an encore threat |
+| Munchkin Invasion | Left unfinished at Brooklyn Bowl 4/24 — hasn't reappeared since |
+| Story of the World | Last played 4/24 — always an encore threat |
+| Chemical Warfare Brigade | Just had its 6th ever performance (5/24) — odds of a quick repeat are low but it's now activated |
+| Frog Legs | Resolved cleanly at Mishawaka 5/22 — no longer in limbo |
 
 *(Full gap chart: discobiscuits.net — artist profile gaps not fully current)*
 
@@ -101,5 +104,5 @@ E:  Frog Legs[inverted, unfinished — venue power lost mid-segue]
 
 ## Warm-Up Listening
 
-- **4/25 Brooklyn Bowl LV** (best of the spring run) → [archive.org FLAC](https://archive.org/details/db2026-04-25.FLAC)
-- **4/18 UC Theatre, Berkeley** (rated 3.81, wild tease-fest in S2) → nugs.net
+- **5/23 Mishawaka** (Caterpillar sandwich in S2, tight Mindless Dribble run) → nugs.net
+- **4/25 Brooklyn Bowl LV** (3.70, best of the Vegas stand) → [archive.org FLAC](https://archive.org/details/db2026-04-25.FLAC)
