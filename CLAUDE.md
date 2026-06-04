@@ -36,10 +36,10 @@ music-intel/
     phish-recent.md
     biscuits-recent.md
   /show-prep/             ← generated pre-show briefs
-  /commands/              ← slash command definitions (human-readable)
-    update-artist.md
+  /.claude/commands/      ← slash command definitions (registered with Claude Code)
     show-prep.md
-    tour-radar.md
+    bustout-watch.md
+    update-music-intel.md
 ```
 
 ## Environment Variables Needed
@@ -70,11 +70,11 @@ python tour_radar.py              # → tour-radar.md
 
 ## Slash Command Definitions
 
-Commands listed under `## Slash Commands Available` are **Claude instructions**, not shell scripts. Their full step-by-step behavior lives in `commands/*.md`. When a command is invoked, read the corresponding file in `commands/` and follow it exactly:
+Slash commands are registered as Claude Code custom commands in `.claude/commands/`. Type `/command-name` in any session to invoke them. Their full step-by-step behavior lives in `.claude/commands/*.md`:
 
-- `commands/update-music-intel.md` — runs all three scripts via parallel agents, then writes `update-summary.md`
-- `commands/show-prep.md` — reads artist profile + recent setlists + tour-radar, generates a pre-show brief using `show-prep-template.md`, saves to `show-prep/[artist]-[date].md`
-- `commands/bustout-watch.md` — read-only; aggregates gap data from `artists/*.md` and prints a ranked summary
+- `.claude/commands/update-music-intel.md` — runs all fetch scripts via parallel agents, then writes `update-summary.md`
+- `.claude/commands/show-prep.md` — reads artist profile + recent setlists + tour-radar, generates a pre-show brief using `show-prep-template.md`, saves to `show-prep/[artist]-[date].md`
+- `.claude/commands/bustout-watch.md` — read-only; aggregates gap data from `artists/*.md` and prints a ranked summary
 
 ## Templates
 
