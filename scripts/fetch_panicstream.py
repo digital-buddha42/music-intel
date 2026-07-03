@@ -63,6 +63,9 @@ def fetch_recent_posts(num_shows=30):
     posts = []
     page = 1
     while len(posts) < num_shows and page <= 20:  # 20-page safety cap
+        if page > 1:
+            time.sleep(1.5)  # courtesy delay between pages -- repeat requests in
+            # quick succession from the same IP appear to get throttled by the host
         try:
             batch = api_get_posts(page=page, per_page=20)
         except requests.HTTPError:
