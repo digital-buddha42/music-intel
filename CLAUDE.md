@@ -17,7 +17,7 @@ A personal music intelligence system for tracking jam band artists, setlists, to
 ## Data Sources
 - **Phish**: phish.net API v5 (requires PHISHNET_API_KEY env var) + phish.in for recordings
 - **Disco Biscuits**: `discobiscuits` MCP server at `https://discobiscuits.net/mcp` — 16 tools including SEARCH_SHOWS, GET_SETLIST, SEARCH_SONGS, SEARCH_SEGUES, SONG_HISTORY. Configured in `.claude/settings.json`. Use MCP tools first; fall back to `fetch_biscuits.py` only if MCP is unavailable.
-- **Widespread Panic**: setlist.fm API (requires SETLISTFM_API_KEY) via `fetch_wsp.py`
+- **Widespread Panic**: panicstream.com WordPress REST API via `fetch_panicstream.py` / `ingest_panicstream.py` — **preferred**: real segue marks in the AIOSEO description field, no API key needed. Fallback: setlist.fm API (requires SETLISTFM_API_KEY) via `fetch_wsp.py` / `ingest_wsp.py` — no segue data. Everyday Companion and Phantasy Tour were evaluated and rejected (EC/PT unreachable from cloud sessions; PT flattens all segues to commas anyway).
 - **Dead & Company / GD**: setlist.fm scraping
 - **General tours/shows**: songkick or bandsintown scraping for upcoming dates
 
@@ -74,7 +74,8 @@ All sources normalize into one SQLite schema at `data/music.db` (gitignored, reg
 
 - **`music_db.py`** — schema + helpers (artists, venues, shows, songs, performances). Song titles dedup via `normalize_title`. Shows are unique per (artist, source, source_key); re-ingest is idempotent. `show_type` tags Tractorbeam/acoustic sets so gap math can exclude them.
 - **`ingest_phish.py`** — phish.net API → DB (`--shows N`, needs PHISHNET_API_KEY)
-- **`ingest_wsp.py`** — setlist.fm API → DB (`--shows N`, needs SETLISTFM_API_KEY). setlist.fm has no segue data, so WSP transitions are NULL.
+- **`ingest_panicstream.py`** — panicstream.com REST API → DB (`--shows N`, no key needed). **Preferred WSP source** — real segue marks preserved as `>` transitions.
+- **`ingest_wsp.py`** — setlist.fm API → DB (`--shows N`, needs SETLISTFM_API_KEY). Fallback only: setlist.fm has no segue data, so WSP transitions are NULL.
 - **`ingest_biscuits.py`** — JSON dump → DB. Biscuits data comes from the `discobiscuits` MCP server queried in-session; export MCP results to JSON (shape documented in the module docstring), then run `python ingest_biscuits.py shows.json`.
 - **`gap_analysis.py`** — writes `gap-report.md` across all bands + prints dedup warnings. Gaps are **window-limited** (only ingested shows count); phish.net's official gap chart stays authoritative for Phish bustout calls.
 - **Tests**: `cd scripts && python -m pytest tests/ -v` — fixture-based, no API keys needed; one live setlist.fm spot-check runs only when SETLISTFM_API_KEY is set.

@@ -5,7 +5,7 @@
 - **Disco Biscuits** — scrape discobiscuits.net + etree
 
 ## Secondary / Watch List
-- **Widespread Panic** — scrape everydaycompanion.com
+- **Widespread Panic** — panicstream.com REST API (real segues, no key); setlist.fm fallback
 - Billy Strings
 - Trey Anastasio Band (TAB)
 

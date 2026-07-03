@@ -27,11 +27,16 @@ Use the `discobiscuits` MCP server tools directly:
 
 **Agent C — Widespread Panic data:**
 ```bash
-cd scripts && python fetch_wsp.py
+cd scripts && python fetch_panicstream.py
 ```
 This writes to:
 - `artists/widespread-panic.md`
 - `setlists/wsp-recent.md`
+
+Preferred source (panicstream.com — real segue marks, no API key). If it
+fails (e.g. cloud session where the site is proxy-blocked), fall back to:
+`cd scripts && python fetch_wsp.py` (setlist.fm — needs SETLISTFM_API_KEY,
+no segue data).
 
 **Agent D — Tour radar:**
 ```bash
