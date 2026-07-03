@@ -21,11 +21,18 @@ Install deps: pip install requests
 import os
 import re
 import html
+import time
 import requests
 from datetime import datetime
 
 BASE_URL = "https://www.panicstream.com/vault"
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; music-intel-personal/1.0)"}
+
+# Only request the fields we actually use — full posts include large,
+# unused blobs (aioseo_head, aioseo_head_json, jetpack-related-posts) and
+# content.rendered embeds multiple full audio-player playlists per show,
+# which is slow to fetch at per_page=50 and can time out on a 15s budget.
+API_FIELDS = "id,slug,link,title,content,aioseo_meta_data"
 
 SET_MARKER_RE = re.compile(r'(\d+[.)]|E\d*[.)])\s*')
 TRANS_SPLIT_RE = re.compile(r'\s*(>|,)\s*')
@@ -33,14 +40,22 @@ SLUG_DATE_RE = re.compile(r'widespread-panic-(\d{2})-(\d{2})-(\d{4})-')
 VENUE_RE = re.compile(r'<h1>Widespread Panic<br\s*/?>\s*(.*?)<br\s*/?>', re.IGNORECASE | re.DOTALL)
 
 
-def api_get_posts(page=1, per_page=50):
-    r = requests.get(
-        f"{BASE_URL}/wp-json/wp/v2/posts",
-        params={"per_page": per_page, "page": page},
-        headers=HEADERS, timeout=15,
-    )
-    r.raise_for_status()
-    return r.json()
+def api_get_posts(page=1, per_page=20, retries=2):
+    params = {"per_page": per_page, "page": page, "_fields": API_FIELDS}
+    last_err = None
+    for attempt in range(retries + 1):
+        try:
+            r = requests.get(
+                f"{BASE_URL}/wp-json/wp/v2/posts",
+                params=params, headers=HEADERS, timeout=30,
+            )
+            r.raise_for_status()
+            return r.json()
+        except requests.Timeout as e:
+            last_err = e
+            if attempt < retries:
+                time.sleep(2 * (attempt + 1))  # brief backoff, then retry
+    raise last_err
 
 
 def fetch_recent_posts(num_shows=30):
@@ -49,8 +64,11 @@ def fetch_recent_posts(num_shows=30):
     page = 1
     while len(posts) < num_shows and page <= 20:  # 20-page safety cap
         try:
-            batch = api_get_posts(page=page, per_page=50)
+            batch = api_get_posts(page=page, per_page=20)
         except requests.HTTPError:
+            break
+        except requests.Timeout:
+            print(f"  Warning: page {page} timed out after retries, skipping")
             break
         if not batch:
             break
