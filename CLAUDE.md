@@ -68,6 +68,17 @@ python tour_radar.py              # → tour-radar.md
 
 **`tour_radar.py`** — pulls Phish upcoming shows from phish.net API, filters against `TARGETS` dict of city lists for PHX and Denver/Boulder regions. Other artists (Biscuits, Billy Strings, TAB) are listed as manual check links — no scraping for those.
 
+## Unified Database Layer
+
+All sources normalize into one SQLite schema at `data/music.db` (gitignored, regenerable) so gap analysis works across bands:
+
+- **`music_db.py`** — schema + helpers (artists, venues, shows, songs, performances). Song titles dedup via `normalize_title`. Shows are unique per (artist, source, source_key); re-ingest is idempotent. `show_type` tags Tractorbeam/acoustic sets so gap math can exclude them.
+- **`ingest_phish.py`** — phish.net API → DB (`--shows N`, needs PHISHNET_API_KEY)
+- **`ingest_wsp.py`** — setlist.fm API → DB (`--shows N`, needs SETLISTFM_API_KEY). setlist.fm has no segue data, so WSP transitions are NULL.
+- **`ingest_biscuits.py`** — JSON dump → DB. Biscuits data comes from the `discobiscuits` MCP server queried in-session; export MCP results to JSON (shape documented in the module docstring), then run `python ingest_biscuits.py shows.json`.
+- **`gap_analysis.py`** — writes `gap-report.md` across all bands + prints dedup warnings. Gaps are **window-limited** (only ingested shows count); phish.net's official gap chart stays authoritative for Phish bustout calls.
+- **Tests**: `cd scripts && python -m pytest tests/ -v` — fixture-based, no API keys needed; one live setlist.fm spot-check runs only when SETLISTFM_API_KEY is set.
+
 ## Slash Command Definitions
 
 Slash commands are registered as Claude Code custom commands in `.claude/commands/`. Type `/command-name` in any session to invoke them. Their full step-by-step behavior lives in `.claude/commands/*.md`:
